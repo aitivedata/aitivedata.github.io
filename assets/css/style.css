@@ -152,7 +152,7 @@ a:hover { color: var(--accent); }
     gap: 1.2rem;
   }
   .nav-links.open { display: flex; }
-  .nav-links a { font-size: 1.05rem; }
+  .nav-links a { font-size: 1.25rem; }
 }
 
 
