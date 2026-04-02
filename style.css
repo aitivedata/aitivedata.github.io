@@ -291,7 +291,8 @@ a:hover { color: var(--accent); }
 
 .section-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--accent);
