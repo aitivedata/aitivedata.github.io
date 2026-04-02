@@ -625,7 +625,7 @@ a:hover { color: var(--accent); }
   .content-block { padding: 1.4rem; }
   .cookie-inner { flex-direction: column; gap: 1rem; text-align: center; }
   .cookie-actions { justify-content: center; }
-  .service-card { background: rgba(255,255,255,0.12); border-color: #484b50; }
-  .contact-card { background: #292b2f; border-color: #484b50; }
-  .content-block { background: #292b2f; border-color: #484b50; }
+  .service-card { background: rgba(255,255,255,0.06); border-color: #3a3c40; }
+  .contact-card { background: #1f2124; border-color: #3a3c40; }
+  .content-block { background: #1f2124; border-color: #3a3c40; }
 }
