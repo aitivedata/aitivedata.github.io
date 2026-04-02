@@ -1,3 +1,13 @@
+// Global function for footer "Cookie Settings" link
+function resetCookieConsent() {
+  try { localStorage.removeItem('cookie_consent'); } catch (e) {}
+  var existing = document.getElementById('google-fonts-link');
+  if (existing) existing.remove();
+  var oldBanner = document.getElementById('cookie-banner');
+  if (oldBanner) oldBanner.remove();
+  window._showConsentBanner();
+}
+
 (function () {
   'use strict';
 
@@ -57,6 +67,9 @@
       hideBanner();
     });
   }
+
+  // Expose showBanner globally for reset
+  window._showConsentBanner = showBanner;
 
   // Initialize
   var consent = getConsent();
