@@ -1,0 +1,21 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0E0F11"/>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#glow)" opacity="0.3"/>
+  <defs>
+    <radialGradient id="glow" cx="30%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#D64B6A" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0E0F11" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <!-- Logo icon -->
+  <g transform="translate(520, 160) scale(2.5)">
+    <polygon points="22,4 36,12 36,28 22,36 8,28 8,12" fill="rgba(214,75,106,0.18)" stroke="#D64B6A" stroke-width="1.2"/>
+    <polygon points="42,16 56,24 56,40 42,48 28,40 28,24" fill="rgba(214,75,106,0.10)" stroke="#D64B6A" stroke-width="0.8" opacity="0.5"/>
+    <polygon points="22,30 36,38 36,54 22,62 8,54 8,38" fill="rgba(214,75,106,0.06)" stroke="#D64B6A" stroke-width="0.8" opacity="0.35"/>
+    <circle cx="22" cy="20" r="6" fill="#D64B6A" opacity="0.5"/>
+    <circle cx="22" cy="20" r="3" fill="#D64B6A" opacity="0.9"/>
+  </g>
+  <!-- Text -->
+  <text x="600" y="420" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#E8E6E3">aitive <tspan fill="#D64B6A">Data</tspan></text>
+  <text x="600" y="470" text-anchor="middle" font-family="monospace" font-size="22" fill="#7A7D82" letter-spacing="4">// Data &middot; AI &middot; IT Solutions</text>
+</svg>
