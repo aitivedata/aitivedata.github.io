@@ -456,7 +456,7 @@ a:hover { color: var(--accent); }
 }
 
 .content-block ul li::before {
-  content: '—';
+  content: '\2014';
   position: absolute;
   left: 0;
   color: var(--accent);

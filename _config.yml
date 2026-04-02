@@ -1,0 +1,41 @@
+title: Aitive Data
+description: "Data · AI · IT Solutions"
+url: "https://aitivedata.github.io"
+baseurl: ""
+
+# Company info (reusable via site.company.*)
+company:
+  name: Aitive Data GmbH
+  name_logo: aitive Data
+  email: office@aitivedata.com
+  address: "Am Ölberg 160"
+  zip: "3400"
+  city: Klosterneuburg
+  country: Austria
+  fn: "628050 d"
+  court: Handelsgericht Wien
+  linkedin: https://linkedin.com/company/aitivedata
+  web: https://www.aitivedata.com
+  directors:
+    - Bernhard Glück
+    - Victoria Glück
+
+# Build
+markdown: kramdown
+permalink: pretty
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: Contact
+    url: /contact/
+  - title: Imprint
+    url: /imprint/
+  - title: Privacy
+    url: /privacy/

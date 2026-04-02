@@ -1,106 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact – Aitive Data</title>
-  <meta name="description" content="Get in touch with Aitive Data. We'd love to hear about your project.">
-  <link rel="stylesheet" href="style.css">
-  <script src="cookie-consent.js"></script>
-</head>
-<body>
+---
+layout: default
+page_title: Contact
+description: "Get in touch with Aitive Data. We'd love to hear about your project."
+---
 
-  <!-- ═══ HEADER ═══ -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="header-logo">
-        <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="22,4 36,12 36,28 22,36 8,28 8,12" fill="rgba(214,75,106,0.18)" stroke="#D64B6A" stroke-width="1.2"/>
-          <polygon points="42,16 56,24 56,40 42,48 28,40 28,24" fill="rgba(214,75,106,0.10)" stroke="#D64B6A" stroke-width="0.8" opacity="0.5"/>
-          <polygon points="22,30 36,38 36,54 22,62 8,54 8,38" fill="rgba(214,75,106,0.06)" stroke="#D64B6A" stroke-width="0.8" opacity="0.35"/>
-          <circle cx="22" cy="20" r="6" fill="#D64B6A" opacity="0.5"/>
-          <circle cx="22" cy="20" r="3" fill="#D64B6A" opacity="0.9"/>
-        </svg>
-        <span class="brand-name">aitive <span>Data</span></span>
-      </a>
-      <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li><a href="imprint.html">Imprint</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
-      </ul>
+<div class="page-header">
+  <h1>Get in <span>Touch</span></h1>
+  <p class="page-subtitle">// We'd love to hear about your project</p>
+</div>
+
+<div class="content-block">
+  <h2>Send us a Message</h2>
+  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
     </div>
-  </header>
-
-  <!-- ═══ MAIN ═══ -->
-  <main class="main">
-    <div class="container">
-
-      <div class="page-header">
-        <h1>Get in <span>Touch</span></h1>
-        <p class="page-subtitle">// We'd love to hear about your project</p>
-      </div>
-
-      <div class="content-block">
-        <h2>Send us a Message</h2>
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What is this about?">
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." required></textarea>
-          </div>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
-
-      <div class="contact-grid" style="margin-top: 1rem;">
-        <div class="contact-card">
-          <div class="label">Email</div>
-          <div class="info"><a href="mailto:office@aitivedata.com">office@aitivedata.com</a></div>
-        </div>
-        <div class="contact-card">
-          <div class="label">Location</div>
-          <div class="info">Klosterneuburg, Austria</div>
-        </div>
-        <div class="contact-card">
-          <div class="label">Web</div>
-          <div class="info"><a href="https://www.aitivedata.com">www.aitivedata.com</a></div>
-        </div>
-        <div class="contact-card">
-          <div class="label">LinkedIn</div>
-          <div class="info"><a href="https://linkedin.com/company/aitivedata" target="_blank" rel="noopener">linkedin.com/company/aitivedata</a></div>
-        </div>
-      </div>
-
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your@email.com" required>
     </div>
-  </main>
-
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <ul class="footer-links">
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="imprint.html">Imprint</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="#" onclick="resetCookieConsent(); return false;">Cookie Settings</a></li>
-      </ul>
-      <p class="footer-legal">© 2026 Aitive Data GmbH · FN 628050 d · Commercial Court Vienna (Handelsgericht Wien)</p>
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="What is this about?">
     </div>
-  </footer>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us about your project or inquiry..." required></textarea>
+    </div>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</div>
 
-</body>
-</html>
+{% include contact-grid.html margin=true %}

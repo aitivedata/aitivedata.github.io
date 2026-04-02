@@ -1,0 +1,18 @@
+<div class="contact-grid"{% if include.margin %} style="margin-top: 1rem;"{% endif %}>
+  <div class="contact-card">
+    <div class="label">Email</div>
+    <div class="info"><a href="mailto:{{ site.company.email }}">{{ site.company.email }}</a></div>
+  </div>
+  <div class="contact-card">
+    <div class="label">Location</div>
+    <div class="info">{{ site.company.city }}, {{ site.company.country }}</div>
+  </div>
+  <div class="contact-card">
+    <div class="label">Web</div>
+    <div class="info"><a href="{{ site.company.web }}">www.aitivedata.com</a></div>
+  </div>
+  <div class="contact-card">
+    <div class="label">LinkedIn</div>
+    <div class="info"><a href="{{ site.company.linkedin }}" target="_blank" rel="noopener">linkedin.com/company/aitivedata</a></div>
+  </div>
+</div>

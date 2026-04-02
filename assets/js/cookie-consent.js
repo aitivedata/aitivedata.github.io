@@ -46,7 +46,7 @@ function resetCookieConsent() {
         '<div class="cookie-text">' +
           '<p><strong>Cookie Settings</strong></p>' +
           '<p>We use external services (Google Fonts) that may process your data. ' +
-          'See our <a href="privacy.html">Privacy Policy</a> for details.</p>' +
+          'See our <a href="/privacy/">Privacy Policy</a> for details.</p>' +
         '</div>' +
         '<div class="cookie-actions">' +
           '<button id="cookie-decline" class="cookie-btn cookie-btn--decline">Decline</button>' +
