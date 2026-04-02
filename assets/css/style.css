@@ -146,10 +146,12 @@ a:hover { color: var(--accent); }
     top: 100%;
     left: 0; right: 0;
     flex-direction: column;
-    background: rgba(14,15,17,0.97);
-    border-bottom: 1px solid var(--border);
-    padding: 1.2rem 2rem 1.5rem;
+    background: #1c1e21;
+    border-bottom: 2px solid var(--accent-dim);
+    border-top: 1px solid #3a3c40;
+    padding: 1.4rem 2rem 1.8rem;
     gap: 1.2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
   }
   .nav-links.open { display: flex; }
   .nav-links a { font-size: 1.05rem; }
