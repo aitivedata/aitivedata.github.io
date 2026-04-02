@@ -11,7 +11,12 @@ description: "Get in touch with Aitive Data. We'd love to hear about your projec
 
 <div class="content-block">
   <h2>Send us a Message</h2>
-  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="d697a4b8-33d3-4c06-a390-b786ac7edf15">
+    <input type="hidden" name="subject" value="New contact from aitivedata.com">
+    <input type="hidden" name="from_name" value="Aitive Data Website">
+    <input type="hidden" name="redirect" value="https://aitivedata.github.io/contact/thanks/">
+    <input type="checkbox" name="botcheck" style="display:none">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -21,8 +26,8 @@ description: "Get in touch with Aitive Data. We'd love to hear about your projec
       <input type="email" id="email" name="email" placeholder="your@email.com" required>
     </div>
     <div class="form-group">
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" placeholder="What is this about?">
+      <label for="subject-field">Subject</label>
+      <input type="text" id="subject-field" name="custom_subject" placeholder="What is this about?">
     </div>
     <div class="form-group">
       <label for="message">Message</label>
