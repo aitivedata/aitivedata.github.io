@@ -476,12 +476,19 @@ a:hover { color: var(--accent); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .team-card {
   position: relative;
   overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card .team-skills {
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .team-card .team-role {
