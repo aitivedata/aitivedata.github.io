@@ -689,4 +689,6 @@ a:hover { color: var(--accent); }
   .service-card { background: rgba(255,255,255,0.06); border-color: #3a3c40; }
   .contact-card { background: #1f2124; border-color: #3a3c40; }
   .content-block { background: #1f2124; border-color: #3a3c40; }
+  .content-block p, .service-card p, .hero .description { color: #a8abb0; }
+  .team-card .team-title { color: #a8abb0; }
 }
