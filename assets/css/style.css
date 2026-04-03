@@ -343,6 +343,61 @@ a:hover { color: var(--accent); }
   font-weight: 300;
 }
 
+.service-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.service-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 300;
+  transition: transform 0.3s;
+  line-height: 1;
+}
+
+.service-card.expanded .service-toggle {
+  transform: rotate(45deg);
+}
+
+.service-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, margin 0.3s ease;
+  margin-top: 0;
+}
+
+.service-card.expanded .service-details {
+  max-height: 300px;
+  margin-top: 0.6rem;
+}
+
+.service-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-details ul li {
+  font-size: 0.72rem;
+  color: var(--muted);
+  padding: 0.25rem 0 0.25rem 1rem;
+  position: relative;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.service-details ul li::before {
+  content: '\2014';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  opacity: 0.5;
+}
+
 
 /* ═══════════ CONTACT GRID ═══════════ */
 
