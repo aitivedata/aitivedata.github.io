@@ -418,6 +418,7 @@ a:hover { color: var(--accent); }
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 1rem;
+  overflow: visible;
 }
 
 .content-block h2 {
@@ -475,10 +476,12 @@ a:hover { color: var(--accent); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  align-items: start;
 }
 
 .team-card {
   position: relative;
+  overflow: visible;
 }
 
 .team-card .team-role {
