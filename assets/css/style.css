@@ -756,4 +756,12 @@ a:hover { color: var(--accent); }
   .content-block { background: #1f2124; border-color: #3a3c40; }
   .content-block p, .service-card p, .hero .description { color: #bfc2c7; }
   .team-card .team-title { color: #bfc2c7; }
+  .service-card h3 { font-size: 1.05rem; }
+  .service-card p { font-size: 0.9rem; }
+  .service-card .service-icon svg { width: 34px; height: 34px; }
+  .service-card { padding: 1.4rem; }
+  .service-details ul li { font-size: 0.88rem; }
+  .section-label { font-size: 1.05rem; }
+  .contact-card .label { font-size: 0.9rem; }
+  .contact-card .info { font-size: 1.05rem; }
 }
