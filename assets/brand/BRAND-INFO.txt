@@ -1,0 +1,24 @@
+Aitive Data - Brand Assets
+==========================
+
+Files:
+  logo-light-bg.svg  - Full logo for light/white backgrounds (invoices, contracts, print)
+  logo-dark-bg.svg   - Full logo for dark backgrounds (website, presentations)
+  logo-icon.svg      - Icon only, square format (social media profiles, favicon)
+
+Colors:
+  Accent (Data):     #D64B6A
+  Accent Light:      #E06B86
+  Text Dark:         #1E1E23
+  Text Light:        #E8E6E3
+  Background Dark:   #0E0F11
+  Surface:           #161719
+
+Font:
+  Libre Baskerville (Bold 700) - Google Fonts
+  Fallback: Georgia, Times New Roman, serif
+
+Usage:
+  - For PNG export: open SVG in browser or Figma, export at 2x or 3x
+  - For print: use SVG directly or export as high-res PNG (300 DPI)
+  - sevDesk: export logo-light-bg.svg as PNG
