@@ -1,11 +1,13 @@
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
-    <ul class="footer-links">
+    <nav aria-label="Footer navigation">
+    <ul class="footer-links" role="list">
       <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
       <li><a href="{{ '/imprint/' | relative_url }}">Imprint</a></li>
       <li><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></li>
       <li><a href="#" onclick="resetCookieConsent(); return false;">Cookie Settings</a></li>
     </ul>
+    </nav>
     <p class="footer-legal">&copy; {{ 'now' | date: '%Y' }} {{ site.company.name }} &middot; FN {{ site.company.fn }} &middot; Commercial Court Vienna ({{ site.company.court }})</p>
   </div>
 </footer>

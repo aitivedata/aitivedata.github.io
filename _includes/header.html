@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="header-inner">
-    <a href="{{ '/' | relative_url }}" class="header-logo">
-      <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+    <a href="{{ '/' | relative_url }}" class="header-logo" aria-label="Aitive Data – Home">
+      <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
         <polygon points="22,4 36,12 36,28 22,36 8,28 8,12" fill="rgba(214,75,106,0.18)" stroke="#D64B6A" stroke-width="1.2"/>
         <polygon points="42,16 56,24 56,40 42,48 28,40 28,24" fill="rgba(214,75,106,0.10)" stroke="#D64B6A" stroke-width="0.8" opacity="0.5"/>
         <polygon points="22,30 36,38 36,54 22,62 8,54 8,38" fill="rgba(214,75,106,0.06)" stroke="#D64B6A" stroke-width="0.8" opacity="0.35"/>
@@ -10,13 +10,15 @@
       </svg>
       <span class="brand-name">aitive <span>Data</span></span>
     </a>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Open navigation menu">
       <span></span><span></span><span></span>
     </button>
-    <ul class="nav-links">
+    <nav aria-label="Main navigation">
+    <ul class="nav-links" role="list">
       {% for item in site.nav %}
         <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active"{% endif %}>{{ item.title }}</a></li>
       {% endfor %}
     </ul>
+    </nav>
   </div>
 </header>

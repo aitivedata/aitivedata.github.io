@@ -42,6 +42,31 @@ body::before {
 a { color: var(--accent-light); text-decoration: none; transition: color 0.2s; }
 a:hover { color: var(--accent); }
 
+/* ═══════════ ACCESSIBILITY ═══════════ */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 8px 8px;
+  z-index: 200;
+  font-size: 0.85rem;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: #fff;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 
 /* ═══════════ HEADER / NAV ═══════════ */
 
