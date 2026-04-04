@@ -407,7 +407,7 @@ a:hover { color: var(--accent); }
 }
 
 .service-details ul li {
-  font-size: 0.82rem;
+  font-size: 0.74rem;
   color: var(--muted);
   padding: 0.25rem 0 0.25rem 1rem;
   position: relative;
