@@ -598,7 +598,7 @@ a:hover { color: var(--accent); }
 
 .team-skills {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.4rem;
   margin-top: 1rem;
 }
@@ -611,6 +611,7 @@ a:hover { color: var(--accent); }
   border: 1px solid rgba(214,75,106,0.15);
   border-radius: 6px;
   padding: 0.3rem 0.6rem;
+  width: fit-content;
 }
 
 @media (max-width: 640px) {
