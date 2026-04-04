@@ -754,13 +754,13 @@ a:hover { color: var(--accent); }
 }
 
 .cookie-btn--decline {
-  background: transparent;
-  color: var(--muted);
+  background: var(--surface-warm);
+  color: var(--text);
   border: 1px solid var(--border);
 }
 
 .cookie-btn--decline:hover {
-  color: var(--text);
+  background: #2a2c2f;
   border-color: var(--muted);
 }
 
