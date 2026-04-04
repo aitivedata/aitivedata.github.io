@@ -760,7 +760,7 @@ a:hover { color: var(--accent); }
   .service-card p { font-size: 0.9rem; }
   .service-card .service-icon svg { width: 34px; height: 34px; }
   .service-card { padding: 1.4rem; }
-  .service-details ul li { font-size: 0.88rem; }
+  .service-details ul li { font-size: 0.88rem; color: #bfc2c7; }
   .section-label { font-size: 1.05rem; }
   .contact-card .label { font-size: 0.9rem; }
   .contact-card .info { font-size: 1.05rem; }
