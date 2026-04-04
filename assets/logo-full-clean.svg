@@ -1,0 +1,35 @@
+<svg width="520" height="140" viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: transparent -->
+
+  <!-- Hexagon group, centered vertically -->
+  <g transform="translate(10, 0)">
+    <!-- Main hexagon (top) -->
+    <polygon points="55,8 85,25 85,59 55,76 25,59 25,25"
+      fill="rgba(214,75,106,0.18)" stroke="#D64B6A" stroke-width="2.2"/>
+
+    <!-- Second hexagon (right) -->
+    <polygon points="90,30 120,47 120,81 90,98 60,81 60,47"
+      fill="rgba(214,75,106,0.10)" stroke="#D64B6A" stroke-width="1.4" opacity="0.5"/>
+
+    <!-- Third hexagon (bottom-left) -->
+    <polygon points="55,62 85,79 85,113 55,130 25,113 25,79"
+      fill="rgba(214,75,106,0.06)" stroke="#D64B6A" stroke-width="1.4" opacity="0.35"/>
+
+    <!-- Dot outer -->
+    <circle cx="55" cy="42" r="11" fill="#D64B6A" opacity="0.5"/>
+    <!-- Dot inner -->
+    <circle cx="55" cy="42" r="5.5" fill="#D64B6A" opacity="0.9"/>
+  </g>
+
+  <!-- Text "aitive" -->
+  <text x="150" y="88"
+    font-family="'Libre Baskerville', Georgia, 'Times New Roman', serif"
+    font-size="52" font-weight="700" fill="#1E1E23"
+    letter-spacing="-0.5">aitive</text>
+
+  <!-- Text "Data" -->
+  <text x="370" y="88"
+    font-family="'Libre Baskerville', Georgia, 'Times New Roman', serif"
+    font-size="52" font-weight="700" fill="#D64B6A"
+    letter-spacing="-0.5">Data</text>
+</svg>
