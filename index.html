@@ -26,7 +26,7 @@ description: "Aitive Data combines data expertise with artificial intelligence. 
   <div class="services-section">
     <p class="section-label">Our Services</p>
     <div class="services-grid">
-      <div class="service-card" onclick="this.classList.toggle('expanded')">
+      <div class="service-card" data-row="1" onclick="toggleServiceRow(this)">
         <span class="service-icon">&#x1F5C4;&#xFE0F;</span>
         <h3>Database Development</h3>
         <p>Design, optimization and management of database systems and data warehouses.</p>
@@ -41,7 +41,7 @@ description: "Aitive Data combines data expertise with artificial intelligence. 
         </div>
         <span class="service-toggle">+</span>
       </div>
-      <div class="service-card" onclick="this.classList.toggle('expanded')">
+      <div class="service-card" data-row="1" onclick="toggleServiceRow(this)">
         <span class="service-icon">&#x1F916;</span>
         <h3>AI &amp; Machine Learning</h3>
         <p>Development and integration of AI solutions – from strategy to implementation.</p>
@@ -56,7 +56,7 @@ description: "Aitive Data combines data expertise with artificial intelligence. 
         </div>
         <span class="service-toggle">+</span>
       </div>
-      <div class="service-card" onclick="this.classList.toggle('expanded')">
+      <div class="service-card" data-row="2" onclick="toggleServiceRow(this)">
         <span class="service-icon">&#x1F4CA;</span>
         <h3>Data Analytics &amp; BI</h3>
         <p>Turning raw data into clear insights and powerful dashboards.</p>
@@ -71,7 +71,7 @@ description: "Aitive Data combines data expertise with artificial intelligence. 
         </div>
         <span class="service-toggle">+</span>
       </div>
-      <div class="service-card" onclick="this.classList.toggle('expanded')">
+      <div class="service-card" data-row="2" onclick="toggleServiceRow(this)">
         <span class="service-icon">&#x1F4A1;</span>
         <h3>IT Consulting</h3>
         <p>Strategic advice for sustainable IT and data decisions.</p>
@@ -86,7 +86,7 @@ description: "Aitive Data combines data expertise with artificial intelligence. 
         </div>
         <span class="service-toggle">+</span>
       </div>
-      <div class="service-card" onclick="this.classList.toggle('expanded')">
+      <div class="service-card" data-row="3" onclick="toggleServiceRow(this)">
         <span class="service-icon">&#x1F517;</span>
         <h3>System Integration</h3>
         <p>Seamlessly connecting, extending and modernizing existing systems.</p>
@@ -101,7 +101,7 @@ description: "Aitive Data combines data expertise with artificial intelligence. 
         </div>
         <span class="service-toggle">+</span>
       </div>
-      <div class="service-card" onclick="this.classList.toggle('expanded')">
+      <div class="service-card" data-row="3" onclick="toggleServiceRow(this)">
         <span class="service-icon">&#x1F9E0;</span>
         <h3>AI Automation</h3>
         <p>Intelligent process automation through custom AI models.</p>
@@ -121,3 +121,24 @@ description: "Aitive Data combines data expertise with artificial intelligence. 
 </div>
 
 {% include contact-grid.html %}
+
+<script>
+function toggleServiceRow(card) {
+  var row = card.getAttribute('data-row');
+  var isMobile = window.innerWidth <= 640;
+  var isExpanded = card.classList.contains('expanded');
+
+  if (isMobile) {
+    card.classList.toggle('expanded');
+  } else {
+    var siblings = document.querySelectorAll('.service-card[data-row="' + row + '"]');
+    siblings.forEach(function(s) {
+      if (isExpanded) {
+        s.classList.remove('expanded');
+      } else {
+        s.classList.add('expanded');
+      }
+    });
+  }
+}
+</script>
