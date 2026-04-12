@@ -428,12 +428,11 @@ a:hover { color: var(--accent); }
 }
 .client-bar-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.65rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   color: var(--muted);
   margin-bottom: 1.2rem;
-  opacity: 0.6;
 }
 .client-bar-logos {
   display: flex;
