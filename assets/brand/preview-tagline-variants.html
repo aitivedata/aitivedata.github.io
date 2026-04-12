@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tagline Varianten — Preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=JetBrains+Mono:wght@400&family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0E0F11;
+      --surface: #161719;
+      --surface-warm: #17181B;
+      --border: #2A2C2F;
+      --text: #E8E6E3;
+      --muted: #7A7D82;
+      --accent: #D64B6A;
+      --accent-light: #E06B86;
+      --accent-glow: rgba(214,75,106,0.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; padding: 2rem; }
+
+    h2.section-title {
+      text-align: center;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: var(--accent);
+      margin: 3rem 0 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+    h2.section-title:first-of-type { margin-top: 1rem; }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2.5rem 3rem;
+      background: linear-gradient(160deg, var(--surface-warm) 0%, var(--surface) 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      margin: 0 auto 2rem;
+      max-width: 700px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: var(--accent-glow);
+      filter: blur(50px);
+    }
+    .hero-logo { display: inline-block; margin-bottom: 1.6rem; position: relative; }
+    .hero-logo svg { width: 64px; height: 80px; }
+    .hero h1 {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 2.1rem; font-weight: 700;
+      letter-spacing: -0.5px; position: relative;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero .subtitle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem; color: var(--muted);
+      margin-top: 0.5rem; letter-spacing: 0.06em;
+    }
+    .hero .tagline {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-top: 1.2rem;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      opacity: 0.85;
+      position: relative;
+    }
+    .hero .description {
+      font-size: 1.05rem; line-height: 1.75;
+      color: var(--muted); font-weight: 300;
+      max-width: 520px; margin: 1.8rem auto 0;
+      position: relative;
+    }
+    .hero .description strong { color: var(--text); font-weight: 400; }
+
+    .label {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== VARIANTE A: Aktuell (nur Subtitle) ====== -->
+  <h2 class="section-title">Variante A — Aktuell (nur Subtitle)</h2>
+  <div class="hero">
+    <span class="label">Aktuell</span>
+    <div class="hero-logo">
+      <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="22,4 36,12 36,28 22,36 8,28 8,12" fill="rgba(214,75,106,0.18)" stroke="#D64B6A" stroke-width="1.2"/>
+        <polygon points="42,16 56,24 56,40 42,48 28,40 28,24" fill="rgba(214,75,106,0.10)" stroke="#D64B6A" stroke-width="0.8" opacity="0.5"/>
+        <polygon points="22,30 36,38 36,54 22,62 8,54 8,38" fill="rgba(214,75,106,0.06)" stroke="#D64B6A" stroke-width="0.8" opacity="0.35"/>
+        <circle cx="22" cy="20" r="6" fill="#D64B6A" opacity="0.5"/>
+        <circle cx="22" cy="20" r="3" fill="#D64B6A" opacity="0.9"/>
+      </svg>
+    </div>
+    <h1>aitive <span>Data</span></h1>
+    <p class="subtitle">// Data &middot; AI &middot; IT Solutions</p>
+    <p class="description">
+      <strong>We combine data expertise with artificial intelligence</strong> –
+      from database architecture to AI-powered analytics.
+      Tailored solutions for businesses ready to unlock the full potential of their data.
+    </p>
+  </div>
+
+  <!-- ====== VARIANTE B: Nur Tagline (ersetzt Subtitle) ====== -->
+  <h2 class="section-title">Variante B — Nur Tagline (ersetzt Subtitle)</h2>
+  <div class="hero">
+    <span class="label">Neu</span>
+    <div class="hero-logo">
+      <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="22,4 36,12 36,28 22,36 8,28 8,12" fill="rgba(214,75,106,0.18)" stroke="#D64B6A" stroke-width="1.2"/>
+        <polygon points="42,16 56,24 56,40 42,48 28,40 28,24" fill="rgba(214,75,106,0.10)" stroke="#D64B6A" stroke-width="0.8" opacity="0.5"/>
+        <polygon points="22,30 36,38 36,54 22,62 8,54 8,38" fill="rgba(214,75,106,0.06)" stroke="#D64B6A" stroke-width="0.8" opacity="0.35"/>
+        <circle cx="22" cy="20" r="6" fill="#D64B6A" opacity="0.5"/>
+        <circle cx="22" cy="20" r="3" fill="#D64B6A" opacity="0.9"/>
+      </svg>
+    </div>
+    <h1>aitive <span>Data</span></h1>
+    <p class="tagline">Turning data into competitive advantage.</p>
+    <p class="description">
+      <strong>We combine data expertise with artificial intelligence</strong> –
+      from database architecture to AI-powered analytics.
+      Tailored solutions for businesses ready to unlock the full potential of their data.
+    </p>
+  </div>
+
+  <!-- ====== VARIANTE C: Beides (Subtitle + Tagline) ====== -->
+  <h2 class="section-title">Variante C — Beides (Subtitle + Tagline)</h2>
+  <div class="hero">
+    <span class="label">Kombiniert</span>
+    <div class="hero-logo">
+      <svg viewBox="0 0 60 80" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="22,4 36,12 36,28 22,36 8,28 8,12" fill="rgba(214,75,106,0.18)" stroke="#D64B6A" stroke-width="1.2"/>
+        <polygon points="42,16 56,24 56,40 42,48 28,40 28,24" fill="rgba(214,75,106,0.10)" stroke="#D64B6A" stroke-width="0.8" opacity="0.5"/>
+        <polygon points="22,30 36,38 36,54 22,62 8,54 8,38" fill="rgba(214,75,106,0.06)" stroke="#D64B6A" stroke-width="0.8" opacity="0.35"/>
+        <circle cx="22" cy="20" r="6" fill="#D64B6A" opacity="0.5"/>
+        <circle cx="22" cy="20" r="3" fill="#D64B6A" opacity="0.9"/>
+      </svg>
+    </div>
+    <h1>aitive <span>Data</span></h1>
+    <p class="subtitle">// Data &middot; AI &middot; IT Solutions</p>
+    <p class="tagline">Turning data into competitive advantage.</p>
+    <p class="description">
+      <strong>We combine data expertise with artificial intelligence</strong> –
+      from database architecture to AI-powered analytics.
+      Tailored solutions for businesses ready to unlock the full potential of their data.
+    </p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Export Logo Icon — LinkedIn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #f5f5f5; }
+    canvas { border: 1px solid #ccc; background: white; margin: 20px; width: 300px; height: 300px; }
+    a { display: inline-block; margin-top: 10px; padding: 12px 32px; background: #D64B6A; color: white; text-decoration: none; border-radius: 6px; font-size: 16px; }
+    a:hover { background: #b8405a; }
+    p { color: #666; margin-top: 16px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h2>aitive Data — Logo 600x600 px (2x Retina)</h2>
+  <canvas id="canvas" width="600" height="600"></canvas>
+  <a id="download" download="aitivedata-logo-600x600.png">Download PNG</a>
+  <p>2x Aufloesung fuer scharfe Darstellung auf LinkedIn.</p>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const S = 2;
+    ctx.scale(S, S);
+
+    // White background
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, 300, 300);
+
+    // === Hexagon helper ===
+    function drawHexPoints(points, fillColor, strokeColor, strokeW, alpha) {
+      ctx.save();
+      ctx.globalAlpha = alpha;
+      ctx.beginPath();
+      for (let i = 0; i < points.length; i += 2) {
+        if (i === 0) ctx.moveTo(points[i], points[i+1]);
+        else ctx.lineTo(points[i], points[i+1]);
+      }
+      ctx.closePath();
+      if (fillColor) { ctx.fillStyle = fillColor; ctx.fill(); }
+      if (strokeColor) { ctx.strokeStyle = strokeColor; ctx.lineWidth = strokeW; ctx.stroke(); }
+      ctx.restore();
+    }
+
+    // Logo icon - scaled and centered
+    const ox = 75, oy = 10, s = 1.35;
+    function tx(x) { return ox + x * s; }
+    function ty(y) { return oy + y * s; }
+
+    // Main hexagon
+    drawHexPoints([tx(25),ty(25), tx(55),ty(8), tx(85),ty(25), tx(85),ty(59), tx(55),ty(76), tx(25),ty(59)],
+      'rgba(214,75,106,0.18)', '#D64B6A', 2.2, 1.0);
+
+    // Secondary hexagon
+    ctx.save(); ctx.globalAlpha = 0.5;
+    drawHexPoints([tx(60),ty(47), tx(90),ty(30), tx(120),ty(47), tx(120),ty(81), tx(90),ty(98), tx(60),ty(81)],
+      'rgba(214,75,106,0.10)', '#D64B6A', 1.4, 0.5);
+    ctx.restore();
+
+    // Third hexagon
+    ctx.save(); ctx.globalAlpha = 0.35;
+    drawHexPoints([tx(25),ty(79), tx(55),ty(62), tx(85),ty(79), tx(85),ty(113), tx(55),ty(130), tx(25),ty(113)],
+      'rgba(214,75,106,0.06)', '#D64B6A', 1.4, 0.35);
+    ctx.restore();
+
+    // Data point circles
+    ctx.save();
+    ctx.globalAlpha = 0.5;
+    ctx.beginPath(); ctx.arc(tx(55), ty(42), 11 * s, 0, Math.PI * 2);
+    ctx.fillStyle = '#D64B6A'; ctx.fill();
+    ctx.restore();
+    ctx.save();
+    ctx.globalAlpha = 0.9;
+    ctx.beginPath(); ctx.arc(tx(55), ty(42), 5.5 * s, 0, Math.PI * 2);
+    ctx.fillStyle = '#D64B6A'; ctx.fill();
+    ctx.restore();
+
+    // Text "aitive Data"
+    document.fonts.ready.then(() => {
+      ctx.save();
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.font = '700 52px "Libre Baskerville", Georgia, serif';
+
+      ctx.fillStyle = '#1E1E23';
+      const totalW = ctx.measureText('aitive Data').width;
+      const aitiveW = ctx.measureText('aitive ').width;
+      const startX = 150 - totalW / 2;
+
+      ctx.textAlign = 'left';
+      ctx.fillText('aitive ', startX, 248);
+      ctx.fillStyle = '#D64B6A';
+      ctx.fillText('Data', startX + aitiveW, 248);
+
+      ctx.restore();
+
+      const pngUrl = canvas.toDataURL('image/png');
+      document.getElementById('download').href = pngUrl;
+    });
+  </script>
+</body>
+</html>
