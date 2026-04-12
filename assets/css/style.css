@@ -272,8 +272,8 @@ a:hover { color: var(--accent); }
 }
 
 .hero-logo svg {
-  width: 64px;
-  height: 80px;
+  width: 80px;
+  height: 100px;
 }
 
 .hero h1 {
