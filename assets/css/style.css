@@ -92,18 +92,18 @@ a:hover { color: var(--accent); }
 .header-logo {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.8rem;
   text-decoration: none;
 }
 
 .header-logo svg {
-  width: 32px;
-  height: 40px;
+  width: 38px;
+  height: 48px;
 }
 
 .header-logo .brand-name {
   font-family: 'Libre Baskerville', serif;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.3px;
