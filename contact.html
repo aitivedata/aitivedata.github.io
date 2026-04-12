@@ -4,15 +4,14 @@ page_title: Contact
 description: "Get in touch with Aitive Data. We'd love to hear about your project."
 ---
 
-<div class="contact-hero" id="contact-hero">
-  <canvas id="contact-canvas"></canvas>
+<div class="page-header">
   <h1>Get in <span>Touch</span></h1>
   <p class="page-subtitle">// We'd love to hear about your project</p>
-  <p class="contact-intro">Whether you're looking to build a data warehouse, integrate AI, or simply need expert advice — let's talk.</p>
 </div>
 
-<div class="content-block reveal">
+<div class="content-block">
   <h2>Send us a Message</h2>
+  <p>Tell us about your project or challenge — we typically respond within 24 hours.</p>
   <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="d697a4b8-33d3-4c06-a390-b786ac7edf15">
     <input type="hidden" name="subject" value="New contact from aitivedata.com">
@@ -40,79 +39,3 @@ description: "Get in touch with Aitive Data. We'd love to hear about your projec
 </div>
 
 {% include contact-grid.html margin=true %}
-
-<script>
-(function() {
-  var canvas = document.getElementById('contact-canvas');
-  if (!canvas) return;
-  var ctx = canvas.getContext('2d');
-  var hero = document.getElementById('contact-hero');
-  var mouseX = 0, mouseY = 0;
-  var particles = [];
-  var PARTICLE_COUNT = 35;
-  var CONNECTION_DIST = 130;
-
-  function resize() {
-    canvas.width = hero.offsetWidth;
-    canvas.height = hero.offsetHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
-
-  hero.addEventListener('mousemove', function(e) {
-    var rect = hero.getBoundingClientRect();
-    mouseX = e.clientX - rect.left;
-    mouseY = e.clientY - rect.top;
-  });
-
-  function Particle() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.vx = (Math.random() - 0.5) * 0.3;
-    this.vy = (Math.random() - 0.5) * 0.3;
-    this.r = Math.random() * 2 + 1;
-    this.baseAlpha = Math.random() * 0.4 + 0.15;
-  }
-  Particle.prototype.update = function() {
-    this.x += this.vx; this.y += this.vy;
-    if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-    var dx = this.x - mouseX, dy = this.y - mouseY;
-    var dist = Math.sqrt(dx * dx + dy * dy);
-    if (dist < 100 && dist > 0) { this.x += (dx / dist) * 0.5; this.y += (dy / dist) * 0.5; }
-  };
-  Particle.prototype.draw = function() {
-    ctx.beginPath(); ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(214,75,106,' + this.baseAlpha + ')'; ctx.fill();
-  };
-
-  for (var i = 0; i < PARTICLE_COUNT; i++) particles.push(new Particle());
-
-  function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    for (var i = 0; i < particles.length; i++) {
-      for (var j = i + 1; j < particles.length; j++) {
-        var dx = particles[i].x - particles[j].x, dy = particles[i].y - particles[j].y;
-        var dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < CONNECTION_DIST) {
-          ctx.beginPath(); ctx.moveTo(particles[i].x, particles[i].y); ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = 'rgba(214,75,106,' + ((1 - dist / CONNECTION_DIST) * 0.15) + ')';
-          ctx.lineWidth = 0.5; ctx.stroke();
-        }
-      }
-    }
-    for (var k = 0; k < particles.length; k++) {
-      var dx2 = particles[k].x - mouseX, dy2 = particles[k].y - mouseY;
-      var dist2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
-      if (dist2 < 150) {
-        ctx.beginPath(); ctx.moveTo(particles[k].x, particles[k].y); ctx.lineTo(mouseX, mouseY);
-        ctx.strokeStyle = 'rgba(214,75,106,' + ((1 - dist2 / 150) * 0.25) + ')';
-        ctx.lineWidth = 0.8; ctx.stroke();
-      }
-    }
-    particles.forEach(function(p) { p.update(); p.draw(); });
-    requestAnimationFrame(animate);
-  }
-  animate();
-})();
-</script>
