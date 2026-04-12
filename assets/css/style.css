@@ -434,11 +434,8 @@ a:hover { color: var(--accent); }
 
 .services-section {
   margin-top: 4rem;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 0;
   position: relative;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section-title {
