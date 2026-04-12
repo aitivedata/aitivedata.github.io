@@ -80,6 +80,17 @@ a:hover { color: var(--accent); }
   border-bottom: 1px solid var(--border);
 }
 
+.site-header::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20%;
+  right: 20%;
+  height: 16px;
+  background: radial-gradient(ellipse at center, rgba(214,75,106,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 .header-inner {
   max-width: 900px;
   margin: 0 auto;
@@ -265,15 +276,35 @@ a:hover { color: var(--accent); }
   filter: blur(50px);
 }
 
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.95; }
+}
+
 .hero-logo {
   display: inline-block;
   margin-bottom: 2rem;
   position: relative;
+  animation: fadeIn 1s ease-out;
 }
 
 .hero-logo svg {
   width: 96px;
   height: 120px;
+}
+
+.hero-logo .pulse-circle {
+  animation: pulseGlow 5s ease-in-out infinite;
 }
 
 .hero h1 {
@@ -283,6 +314,7 @@ a:hover { color: var(--accent); }
   letter-spacing: -0.5px;
   position: relative;
   margin-bottom: 0.3rem;
+  animation: fadeSlideUp 0.8s ease-out 0.2s both;
 }
 
 .hero h1 span { color: var(--accent); }
@@ -293,6 +325,7 @@ a:hover { color: var(--accent); }
   color: var(--muted);
   margin-top: 0.4rem;
   letter-spacing: 0.08em;
+  animation: fadeSlideUp 0.8s ease-out 0.4s both;
 }
 
 .hero .tagline {
@@ -303,6 +336,7 @@ a:hover { color: var(--accent); }
   letter-spacing: 0.01em;
   opacity: 0.9;
   position: relative;
+  animation: fadeSlideUp 0.8s ease-out 0.6s both;
 }
 
 .hero .description {
@@ -313,6 +347,7 @@ a:hover { color: var(--accent); }
   max-width: 480px;
   margin: 1.5rem auto 0;
   position: relative;
+  animation: fadeSlideUp 0.8s ease-out 0.8s both;
 }
 
 .hero .description strong {
