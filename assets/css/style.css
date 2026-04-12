@@ -203,7 +203,7 @@ a:hover { color: var(--accent); }
 }
 
 .container {
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
 }
@@ -432,9 +432,19 @@ a:hover { color: var(--accent); }
 /* ═══════════ SERVICES GRID ═══════════ */
 
 .services-section {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
+  padding: 2.5rem 0;
   position: relative;
 }
+
+.section-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.section-title span { color: var(--accent); }
 
 .section-label {
   font-family: 'JetBrains Mono', monospace;
