@@ -432,12 +432,11 @@ a:hover { color: var(--accent); }
 }
 .client-bar-hero .client-bar-label {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--muted);
+  color: var(--accent);
   margin-bottom: 0.8rem;
-  opacity: 0.5;
 }
 .client-bar-hero .client-bar-logos {
   display: flex;
