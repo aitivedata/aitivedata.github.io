@@ -250,7 +250,7 @@ a:hover { color: var(--accent); }
   background: linear-gradient(160deg, var(--surface-warm) 0%, var(--surface) 100%);
   border: 1px solid var(--border);
   border-radius: 24px;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   position: relative;
   overflow: hidden;
 }
@@ -423,8 +423,8 @@ a:hover { color: var(--accent); }
 /* ═══════════ SERVICES GRID ═══════════ */
 
 .services-section {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-top: 4.5rem;
+  margin-bottom: 4rem;
   position: relative;
 }
 
@@ -436,6 +436,7 @@ a:hover { color: var(--accent); }
   margin-bottom: 2.5rem;
 }
 .section-title span { color: var(--accent); }
+.section-title { margin-bottom: 3rem; }
 
 .section-label {
   font-family: 'JetBrains Mono', monospace;
@@ -451,7 +452,7 @@ a:hover { color: var(--accent); }
 .services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 1.2rem;
   margin-top: 1.2rem;
   text-align: left;
 }
@@ -568,7 +569,8 @@ a:hover { color: var(--accent); }
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .contact-card {
