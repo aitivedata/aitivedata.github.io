@@ -160,8 +160,8 @@ function toggleServiceRow(card) {
   var hero = document.getElementById('hero');
   var mouseX = 0, mouseY = 0;
   var particles = [];
-  var PARTICLE_COUNT = 40;
-  var CONNECTION_DIST = 120;
+  var PARTICLE_COUNT = 60;
+  var CONNECTION_DIST = 140;
 
   function resize() {
     canvas.width = hero.offsetWidth;
@@ -182,7 +182,7 @@ function toggleServiceRow(card) {
     this.vx = (Math.random() - 0.5) * 0.3;
     this.vy = (Math.random() - 0.5) * 0.3;
     this.r = Math.random() * 2 + 1;
-    this.baseAlpha = Math.random() * 0.3 + 0.1;
+    this.baseAlpha = Math.random() * 0.4 + 0.15;
   }
   Particle.prototype.update = function() {
     this.x += this.vx;
@@ -216,7 +216,7 @@ function toggleServiceRow(card) {
         var dy = particles[i].y - particles[j].y;
         var dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < CONNECTION_DIST) {
-          var alpha = (1 - dist / CONNECTION_DIST) * 0.08;
+          var alpha = (1 - dist / CONNECTION_DIST) * 0.15;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(particles[j].x, particles[j].y);
@@ -231,7 +231,7 @@ function toggleServiceRow(card) {
       var dy2 = particles[k].y - mouseY;
       var dist2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
       if (dist2 < 150) {
-        var alpha2 = (1 - dist2 / 150) * 0.15;
+        var alpha2 = (1 - dist2 / 150) * 0.25;
         ctx.beginPath();
         ctx.moveTo(particles[k].x, particles[k].y);
         ctx.lineTo(mouseX, mouseY);
