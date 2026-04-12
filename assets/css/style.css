@@ -710,6 +710,15 @@ a:hover { color: var(--accent); }
   padding-top: 1rem;
 }
 
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  margin-bottom: 1rem;
+}
+
 .team-card .team-role {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.7rem;
