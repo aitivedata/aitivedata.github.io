@@ -924,6 +924,50 @@ a:hover { color: var(--accent); }
 }
 
 
+/* ═══════════ ABOUT TEASER ═══════════ */
+
+.about-teaser {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin: 1rem 0;
+}
+.about-teaser-photos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+.about-teaser-photos img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid var(--bg);
+}
+.about-teaser-photos img:last-child {
+  margin-left: -16px;
+}
+.about-teaser h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.about-teaser h3 span { color: var(--accent); }
+.about-teaser p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto 1.2rem;
+}
+.about-teaser .btn-ghost {
+  font-size: 0.82rem;
+  padding: 0.7rem 1.6rem;
+}
+
+
 /* ═══════════ CTA SECTION ═══════════ */
 
 .cta-section {
