@@ -420,6 +420,42 @@ a:hover { color: var(--accent); }
 }
 
 
+/* ═══════════ CLIENT BAR ═══════════ */
+
+.client-bar {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.client-bar-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+  opacity: 0.6;
+}
+.client-bar-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.client-bar-logos span {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  opacity: 0.25;
+  letter-spacing: 0.02em;
+  transition: opacity 0.3s;
+}
+.client-bar-logos span:hover {
+  opacity: 0.5;
+}
+
+
 /* ═══════════ SERVICES GRID ═══════════ */
 
 .services-section {
