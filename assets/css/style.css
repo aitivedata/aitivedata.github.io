@@ -433,8 +433,8 @@ a:hover { color: var(--accent); }
 /* ═══════════ SERVICES GRID ═══════════ */
 
 .services-section {
-  margin-top: 4rem;
-  padding: 2.5rem 0;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   position: relative;
 }
 
@@ -579,8 +579,6 @@ a:hover { color: var(--accent); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .contact-card {
